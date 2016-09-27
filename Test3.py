@@ -7,11 +7,13 @@ balance = float(input("Please, еnter your start balance "))
 annualInterestRate = float(input("Please, еnter your annualInterestRate "))
 monthlyInterestRate = annualInterestRate / 12.0
 payment = 10
-n = 0
+
 newbalance = balance
 while newbalance >= payment:
+    for n in range(1,13):
          balancestay = balance - payment
          newbalance = balancestay + (monthlyInterestRate * balancestay)
          balance = newbalance
          payment += 10
 print("Lowest Payment: ", payment)
+
