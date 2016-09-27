@@ -6,13 +6,11 @@ annualInterestRate = float(input("Please, еnter your annualInterestRate "))
 paymentrate = float(input("Please, еnter your monthlyPaymentRate "))
 
 monthlyInterestRate = annualInterestRate / 12.0
-n = 0
 totalpaid = 0
 for n in range(1, 13):
     payment = balance * paymentrate
     balancestay = balance - payment
     newbalance = balancestay + (monthlyInterestRate * balancestay)
-    n+=1
     balance = newbalance
     totalpaid += payment
     print("Month: ", n-1)
